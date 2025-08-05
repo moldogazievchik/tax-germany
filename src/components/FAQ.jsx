@@ -1,3 +1,5 @@
+import "../styles/FAQ.css";
+
 const faqs = [
   {
     question: "Кто может вернуть налоги?",
@@ -19,13 +21,13 @@ const faqs = [
 
 function FAQ() {
   return (
-    <section className="bg-gray-100 py-16 px-4">
-      <h2 className="text-3xl font-bold text-center mb-10 text-gray-800">Частые вопросы</h2>
-      <div className="max-w-3xl mx-auto space-y-6">
+    <section className="faq-section">
+      <h2 className="faq-title">Частые вопросы</h2>
+      <div className="faq-list">
         {faqs.map((faq, index) => (
-          <div key={index} className="bg-white p-6 rounded-xl shadow">
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">{faq.question}</h3>
-            <p className="text-gray-600">{faq.answer}</p>
+          <div key={index} className="faq-item">
+            <h3 className="faq-question">{faq.question}</h3>
+            <p className="faq-answer">{faq.answer}</p>
           </div>
         ))}
       </div>

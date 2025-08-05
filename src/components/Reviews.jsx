@@ -1,3 +1,5 @@
+import "../styles/Reviews.css";
+
 const reviews = [
   {
     name: "Алия, Бишкек",
@@ -21,22 +23,19 @@ const reviews = [
 
 function Reviews() {
   return (
-    <section className="bg-white py-16 px-4 text-center">
-      <h2 className="text-3xl font-bold mb-10 text-gray-800">Отзывы наших клиентов</h2>
-      <div className="flex flex-col md:flex-row justify-center gap-8 max-w-6xl mx-auto">
+    <section className="reviews-section">
+      <h2 className="reviews-title">Отзывы наших клиентов</h2>
+      <div className="reviews-list">
         {reviews.map((review, index) => (
-          <div
-            key={index}
-            className="bg-gray-50 rounded-xl shadow-md p-6 w-full max-w-sm"
-          >
+          <div key={index} className="review-item">
             <img
               src={review.avatar}
               alt={review.name}
-              className="w-16 h-16 rounded-full mx-auto mb-4 object-cover"
+              className="review-avatar"
             />
-            <h3 className="text-lg font-semibold text-gray-700">{review.name}</h3>
-            <p className="text-sm text-gray-500 mb-2">Возврат: {review.amount} €</p>
-            <p className="text-gray-600 italic">“{review.text}”</p>
+            <h3 className="review-name">{review.name}</h3>
+            <p className="review-amount">Возврат: {review.amount} €</p>
+            <p className="review-text">“{review.text}”</p>
           </div>
         ))}
       </div>
