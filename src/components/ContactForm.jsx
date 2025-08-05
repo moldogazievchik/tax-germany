@@ -1,4 +1,6 @@
+// ContactForm.jsx (обновлённый с обычным CSS)
 import { useState } from "react";
+import "../styles/ContactForm.css";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -20,21 +22,17 @@ function ContactForm() {
     e.preventDefault();
     console.log("Форма отправлена:", formData);
     setSubmitted(true);
-
-    // Тут ты можешь подключить Telegram Bot API, email отправку и т.д.
   };
 
   return (
-    <section id="contact" className="py-16 px-4 bg-white text-center">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6">Оставить заявку</h2>
-      <p className="text-gray-600 mb-8 max-w-xl mx-auto">
-        Напиши нам — и мы поможем вернуть твои налоги без лишних стрессов. Ответим в Telegram или WhatsApp.
+    <section id="contact" className="contact-section">
+      <h2 className="contact-heading">Оставить заявку</h2>
+      <p className="contact-description">
+        Напиши нам — и мы поможем вернуть твои налоги без лишних стрессов.
+        Ответим в Telegram или WhatsApp.
       </p>
 
-      <form
-        onSubmit={handleSubmit}
-        className="max-w-xl mx-auto bg-gray-50 p-6 rounded-xl shadow space-y-4"
-      >
+      <form onSubmit={handleSubmit} className="contact-form">
         <input
           type="text"
           name="name"
@@ -42,7 +40,6 @@ function ContactForm() {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full p-3 border rounded"
         />
         <input
           type="text"
@@ -51,26 +48,19 @@ function ContactForm() {
           value={formData.contact}
           onChange={handleChange}
           required
-          className="w-full p-3 border rounded"
         />
         <textarea
           name="message"
           placeholder="Сообщение (необязательно)"
           value={formData.message}
           onChange={handleChange}
-          className="w-full p-3 border rounded"
           rows={4}
         ></textarea>
-        <button
-          type="submit"
-          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl w-full transition"
-        >
-          Отправить
-        </button>
+        <button type="submit">Отправить</button>
       </form>
 
       {submitted && (
-        <p className="text-green-600 font-semibold mt-6">
+        <p className="contact-success">
           Спасибо! Мы скоро свяжемся с тобой ✌️
         </p>
       )}
