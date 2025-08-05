@@ -1,0 +1,48 @@
+.reviews-section {
+  background-color: #ffffff;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+.reviews-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+  color: #2d3748;
+}
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.review-card {
+  background-color: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  max-width: 20rem;
+  margin: 0 auto;
+}
+.review-avatar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 9999px;
+  object-fit: cover;
+  margin: 0 auto 1rem auto;
+}
+.review-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+.review-amount {
+  font-size: 0.875rem;
+  color: #718096;
+  margin-bottom: 0.5rem;
+}
+.review-text {
+  color: #4a5568;
+  font-style: italic;
+}

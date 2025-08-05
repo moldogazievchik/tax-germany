@@ -1,0 +1,39 @@
+.steps-section {
+  background-color: #ffffff;
+  padding: 4rem 1rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+.steps-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #2d3748;
+  margin-bottom: 3rem;
+}
+.steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.step-item {
+  text-align: center;
+}
+.step-image {
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto 1rem auto;
+}
+.step-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.step-text {
+  color: #4a5568;
+}
